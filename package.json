@@ -1,0 +1,22 @@
+{
+  "name": "yarn-cypress-cache",
+  "version": "1.0.0",
+  "description": "Example caching Cypress on Travis when using Yarn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/yarn-cypress-cache.git"
+  },
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com> (https://glebbahmutov.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bahmutov/yarn-cypress-cache/issues"
+  },
+  "homepage": "https://github.com/bahmutov/yarn-cypress-cache#readme",
+  "devDependencies": {
+    "cypress": "3.4.1"
+  }
+}
