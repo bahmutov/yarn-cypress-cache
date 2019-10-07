@@ -15,14 +15,17 @@ cache:
   directories:
     - ~/.cache/yarn
     - ~/.cache/Cypress
-  # install dependencies and check that Cypress can run
+  # install dependencies
   override:
     - yarn
 
-script:
+# check that Cypress can run
+before_script:
   # where is Cypress binary cached?
   - yarn cypress cache path
   # show me all versions of Cypress binary cached
   - yarn cypress cache list
   - yarn cypress verify
-  - echo All good
+
+script:
+  - yarn cypress version
