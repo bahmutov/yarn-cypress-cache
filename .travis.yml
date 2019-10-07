@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - 12
+
+# if using Ubuntu 16 need this library
+# https://github.com/cypress-io/cypress-documentation/pull/1647
+addons:
+  apt:
+    packages:
+    - libgconf-2-4
+
+cache:
+  # cache both npm modules and Cypress binary
+  directories:
+    - ~/.cache/yarn
+    - ~/.cache/Cypress
+  # install dependencies and check that Cypress can run
+  override:
+    - yarn
+    # where is Cypress binary cached?
+    - yarn cypress cache path
+    # show me all versions of Cypress binary cached
+    - yarn cypress cache list
+    - yarn cypress verify
+
+script:
+  - echo All good
