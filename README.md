@@ -1,6 +1,10 @@
 # yarn-cypress-cache [![Build Status](https://travis-ci.org/bahmutov/yarn-cypress-cache.svg?branch=master)](https://travis-ci.org/bahmutov/yarn-cypress-cache)
 > Example caching Cypress on Travis when using Yarn
 
+See [.travis.yml](.travis.yml) file.
+
+## Notes
+
 ```shell
 $ yarn -v
 1.17.3
