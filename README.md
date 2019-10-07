@@ -15,3 +15,13 @@ Check where Cypress binary was downloaded and cached (Mac)
 $ yarn cypress cache path
 /Users/gleb/Library/Caches/Cypress
 ```
+
+You can also see what binary versions are cached in that folder
+
+```shell
+$ yarn cypress cache list
+```
+
+## More info
+
+- Travis caching documentation page https://docs.travis-ci.com/user/caching/
