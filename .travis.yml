@@ -1,3 +1,4 @@
+# https://docs.travis-ci.com/user/job-lifecycle/
 language: node_js
 
 node_js:
@@ -21,6 +22,9 @@ cache:
 
 # check that Cypress can run
 before_script:
+  # just in case the install script skipped Cypress post-install hook for some reason
+  # call install ourselves. If there is binary already installed, it will quickly finish
+  - yarn cypress install
   # where is Cypress binary cached?
   - yarn cypress cache path
   # show me all versions of Cypress binary cached

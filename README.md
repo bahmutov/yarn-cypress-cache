@@ -24,8 +24,21 @@ You can also see what binary versions are cached in that folder
 
 ```shell
 $ yarn cypress cache list
+3.4.0 3.4.1
+```
+
+Cypress installs its NPM package, then runs its `postinstall` hook that downloads Cypress binary. If the hooks is skipped for some reason, the binary will be missing. You can safely run install yourself - if there is binary already present, it will finish quickly.
+
+```shell
+$ yarn cypress install
+
+Cypress 3.4.1 is installed in /Users/gleb/Library/Caches/Cypress/3.4.1
+
+Skipping installation:
+
+  Pass the --force option if you'd like to reinstall anyway.
 ```
 
 ## More info
 
-- Travis caching documentation page https://docs.travis-ci.com/user/caching/
+- Travis caching documentation page [https://docs.travis-ci.com/user/caching/](https://docs.travis-ci.com/user/job-lifecycle/)
