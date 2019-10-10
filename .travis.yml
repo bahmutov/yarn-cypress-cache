@@ -19,7 +19,7 @@ cache:
 
 install:
   # install dependencies
-  - yarn
+  - yarn install --frozen-lockfile
   # just in case the install script skipped Cypress post-install hook for some reason
   # call install ourselves. If there is binary already installed, it will quickly finish.
   # By overriding the install step we make sure the NPM modules AND the Cypress binary
