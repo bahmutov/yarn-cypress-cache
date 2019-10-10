@@ -27,7 +27,16 @@ $ yarn cypress cache list
 3.4.0 3.4.1
 ```
 
+## Tip
+
 Cypress installs its NPM package, then runs its `postinstall` hook that downloads Cypress binary. If the hooks is skipped for some reason, the binary will be missing. You can safely run install yourself - if there is binary already present, it will finish quickly.
+
+```yaml
+before_script:
+  - yarn cypress install
+script:
+  - yarn cypress run
+```
 
 ```shell
 $ yarn cypress install
