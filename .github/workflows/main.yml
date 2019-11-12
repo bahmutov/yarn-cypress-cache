@@ -9,6 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
     - name: Cypress run
       uses: cypress-io/github-action@v1
 
