@@ -5,9 +5,7 @@ on: [push]
 jobs:
   build:
 
-    # runs-on: ubuntu-latest
-    # runs-on: windows-latest
-    # runs-on: macos-latest
+    # run test job on each OS
     strategy:
       matrix:
         os: ['ubuntu-latest', 'windows-latest', 'macos-latest']
@@ -21,11 +19,11 @@ jobs:
     # "C:\Program Files\nodejs\npm.cmd ci"
     # For example, when installing Node 12.x
     # npm is found at "C:\hostedtoolcache\windows\node\12.13.0\x64\npm.cmd"
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
+    # - uses: actions/setup-node@v1
+    #   with:
+    #     node-version: '12.x'
     - run: echo $HOME
     - run: npm config get cache
     - name: Cypress run
-      uses: cypress-io/github-action@061909a
+      uses: cypress-io/github-action@7c38bde
 
