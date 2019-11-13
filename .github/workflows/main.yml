@@ -13,5 +13,5 @@ jobs:
       with:
         node-version: '12.x'
     - name: Cypress run
-      uses: cypress-io/github-action@v1
+      uses: cypress-io/github-action@dc85478
 
