@@ -14,5 +14,5 @@ jobs:
     #     node-version: '12.x'
     - run: echo $HOME
     - name: Cypress run
-      uses: cypress-io/github-action@58caf5b
+      uses: cypress-io/github-action@bba5acc
 
