@@ -12,6 +12,8 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
+    - run: echo $HOME
+    - run: echo ~
     - name: Cypress run
       uses: cypress-io/github-action@92e071b
 
