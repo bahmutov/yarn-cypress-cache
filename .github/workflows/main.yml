@@ -9,9 +9,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    # - uses: actions/setup-node@v1
-    #   with:
-    #     node-version: '12.x'
+    # without Node installed, the system node on Windows
+    # is found at (npm case) "C:\Program Files\nodejs\npm.cmd"
+    # which leads to an error when doing
+    # "C:\Program Files\nodejs\npm.cmd ci"
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
     - run: echo $HOME
     - name: Cypress run
       uses: cypress-io/github-action@bba5acc
