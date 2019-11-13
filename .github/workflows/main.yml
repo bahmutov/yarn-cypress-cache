@@ -13,10 +13,13 @@ jobs:
     # is found at (npm case) "C:\Program Files\nodejs\npm.cmd"
     # which leads to an error when doing
     # "C:\Program Files\nodejs\npm.cmd ci"
+    # For example, when installing Node 12.x
+    # npm is found at "C:\hostedtoolcache\windows\node\12.13.0\x64\npm.cmd"
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
     - run: echo $HOME
+    - run: npm config get cache
     - name: Cypress run
       uses: cypress-io/github-action@bba5acc
 
