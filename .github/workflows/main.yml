@@ -25,5 +25,5 @@ jobs:
     - run: echo $HOME
     - run: npm config get cache
     - name: Cypress run
-      uses: cypress-io/github-action@7c38bde
+      uses: cypress-io/github-action@0077a8c
 
