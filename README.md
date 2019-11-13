@@ -1,4 +1,4 @@
-# yarn-cypress-cache [![Build Status](https://travis-ci.org/bahmutov/yarn-cypress-cache.svg?branch=master)](https://travis-ci.org/bahmutov/yarn-cypress-cache)
+# yarn-cypress-cache [![Build Status](https://travis-ci.org/bahmutov/yarn-cypress-cache.svg?branch=master)](https://travis-ci.org/bahmutov/yarn-cypress-cache) [![renovate-app badge][renovate-badge]][renovate-app]
 > Example caching Cypress on Travis when using Yarn
 
 See [.travis.yml](.travis.yml) file.
@@ -61,3 +61,6 @@ Skipping installation:
 ## More info
 
 - Travis caching documentation page [https://docs.travis-ci.com/user/caching/](https://docs.travis-ci.com/user/job-lifecycle/)
+
+[renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
+[renovate-app]: https://renovateapp.com/
